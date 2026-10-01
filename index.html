@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Charles Wolford · GIS Leader and Solutions Architect</title>
+  <meta name="description" content="Charles Wolford, GIS Leader and Solutions Architect. I build GIS capability that organisations run on, from technical strategy and platform architecture to the applications teams use every day.">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta property="og:title" content="Charles Wolford · GIS Leader and Solutions Architect">
+  <meta property="og:description" content="I build GIS capability that organisations run on, from technical strategy and platform architecture to the applications teams use every day.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/headshot.jpg">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400&family=Geist+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=22">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip" href="#profile">Skip to content</a>
+
+  <header class="kernel" id="top">
+    <div class="kernel-inner">
+      <a class="kernel-file" href="#top">
+        <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 2.5h5l3 3v8h-8z"/><path d="M9.5 2.5v3h3"/><path d="M6.5 9.5h4M6.5 11.5h4"/></svg>
+        <span>wolford.ipynb</span>
+      </a>
+
+      <nav class="kernel-nav" aria-label="Sections">
+        <a href="#profile">Profile</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#credentials">Credentials</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="kernel-actions">
+        <span class="kernel-status" aria-live="polite">
+          <i class="dot" data-dot></i>
+          <span class="mono-sm" data-status>kernel idle</span>
+        </span>
+        <button class="pill pill-outline pill-sm" type="button" data-run-all aria-label="Run all cells">
+          <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3.5v9l7-4.5z"/></svg>
+          <span class="run-label">Run all</span>
+        </button>
+        <a class="pill pill-solid pill-sm" href="#contact" data-email>Email</a>
+        <button class="pill pill-outline pill-sm kernel-menu" type="button" aria-expanded="false" aria-controls="mobile-nav">Cells</button>
+      </div>
+    </div>
+    <nav class="kernel-mobile" id="mobile-nav" aria-label="Sections" hidden>
+      <a href="#profile">Profile</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <canvas class="terrain" data-terrain aria-hidden="true"></canvas>
+
+  <main class="notebook">
+
+    <!-- ── Cell 1: profile ─────────────────────────────────────────── -->
+    <section class="cell" id="profile" data-cell data-code="wolford.profile()">
+      <div class="prompt mono-sm" aria-hidden="true">In&nbsp;[<span data-n>&nbsp;</span>]:</div>
+      <div class="cell-main">
+        <pre class="code" aria-hidden="true"><code data-typed>wolford.profile()</code></pre>
+        <div class="output profile">
+          <figure class="portrait">
+            <img src="assets/headshot.webp" alt="Charles Wolford, studio portrait against black" width="884" height="888" fetchpriority="high" decoding="async">
+          </figure>
+          <div class="profile-text">
+            <p class="mono role">GIS Leader and Solutions Architect</p>
+            <h1 class="display-xl">Charles<br>Wolford</h1>
+            <p class="lead">I build GIS capability that organisations run on, from technical strategy and platform architecture to the applications teams use every day.</p>
+            <p class="sub">At Ridge, I'm responsible for GIS across the firm. At Amazon, I went from founding a new GIS programme as GIS Manager to leading the design and development of division-wide GIS infrastructure as GIS Solutions Architect. My career began in US Army geospatial intelligence (GEOINT) across conventional and special operations, where location data shaped decisions on the ground.</p>
+            <p class="mono creds">MSc GIS &nbsp;<span class="sep">·</span>&nbsp; Executive MBA &nbsp;<span class="sep">·</span>&nbsp; CGeog (GIS) &nbsp;<span class="sep">·</span>&nbsp; FRGS</p>
+            <div class="actions">
+              <a class="pill pill-solid" href="#contact" data-email>Email me</a>
+              <a class="pill pill-outline" href="https://linkedin.com/in/charlesgwolford" target="_blank" rel="noopener">
+                LinkedIn
+                <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 11.5l7-7M6 4.5h5.5V10"/></svg>
+              </a>
+              <a class="pill pill-outline" href="assets/Charles-Wolford-CV.pdf" download="Charles-Wolford-CV.pdf">
+                <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2.5v8M4.5 7l3.5 3.5L11.5 7M3 13.5h10"/></svg>
+                Download CV
+              </a>
+            </div>
+          </div>
+        </div>
+        <p class="stamp mono-sm" data-stamp aria-hidden="true"></p>
+      </div>
+    </section>
+
+    <!-- ── Cell 2: projects ────────────────────────────────────────── -->
+    <section class="cell" id="projects" data-cell data-code="wolford.projects.list(sort=&quot;newest&quot;)">
+      <div class="prompt mono-sm" aria-hidden="true">In&nbsp;[<span data-n>&nbsp;</span>]:</div>
+      <div class="cell-main">
+        <pre class="code" aria-hidden="true"><code data-typed>wolford.projects.list(sort="newest")</code></pre>
+        <div class="output">
+          <div class="output-head">
+            <h2 class="display-md">Selected projects</h2>
+            <p class="body-lg">Work I've led, most recent first. Open a project to see how it was built and what it delivered.</p>
+          </div>
+          <ul class="projects" data-projects></ul>
+          <noscript><p class="body">Project entries are rendered from <code>js/projects.js</code> and need JavaScript to display.</p></noscript>
+        </div>
+        <p class="stamp mono-sm" data-stamp aria-hidden="true"></p>
+      </div>
+    </section>
+
+    <!-- ── Cell 3: experience ──────────────────────────────────────── -->
+    <section class="cell" id="experience" data-cell data-code="wolford.experience.chapters()">
+      <div class="prompt mono-sm" aria-hidden="true">In&nbsp;[<span data-n>&nbsp;</span>]:</div>
+      <div class="cell-main">
+        <pre class="code" aria-hidden="true"><code data-typed>wolford.experience.chapters()</code></pre>
+        <div class="output">
+          <div class="output-head">
+            <h2 class="display-md">Experience</h2>
+            <p class="body-lg">17 years in GIS and geospatial, from leading GEOINT teams in the US Army to building Amazon Corporate Security's GIS programme and now leading GIS at Ridge.</p>
+          </div>
+          <div class="chapters">
+            <section class="chapter">
+              <header class="chapter-head">
+                <h3 class="display-sm">Built environment consultancy</h3>
+                <p class="mono-sm chapter-when">2025 – present</p>
+                <p class="chapter-where">Ridge and Partners LLP, Newcastle upon Tyne</p>
+              </header>
+              <div class="chapter-roles">
+                <article class="role">
+                  <h4 class="role-title">GIS Solutions Architect (Senior Associate), Digital Engineering</h4>
+                  <p class="role-meta">Ridge and Partners LLP · Newcastle upon Tyne · September 2025 to present</p>
+                  <ul>
+                    <li>Oversees GIS solutions across Ridge from strategy to delivery as part of the Digital Engineering team; administers the firm's ArcGIS Online organisation and sets its GIS standards.</li>
+                    <li>Guides clients through critical GIS decisions and shapes digital estate roadmaps that move organisations from fragmented data to confident, evidence-led planning.</li>
+                    <li>Leads end-to-end delivery of interactive 2D and 3D estate experiences across healthcare, higher education and housing, uniting drone, survey, BIM and asset data in a single view: BIM and floor plan pipelines, and the orthomosaic, 3D scene and defect mapping deliverable on drone condition surveys.</li>
+                    <li>Builds and scales Ridge's GIS offer, including Experience Builder web applications, Survey123 and Field Maps mobile applications, and floor-aware mapping for capacity management.</li>
+                  </ul>
+                </article>
+              </div>
+            </section>
+            <section class="chapter">
+              <header class="chapter-head">
+                <h3 class="display-sm">Security intelligence and enterprise GIS</h3>
+                <p class="mono-sm chapter-when">2017 – 2020 · 2022 – 2025</p>
+                <p class="chapter-where">Amazon, London and Prague</p>
+              </header>
+              <div class="chapter-roles">
+                <article class="role">
+                  <h4 class="role-title">GIS Solutions Architect</h4>
+                  <p class="role-meta">Amazon · London · August 2023 to September 2025</p>
+                  <ul>
+                    <li>Technical lead for GIS within Amazon Corporate Security, guiding architecture, platform and tooling decisions.</li>
+                    <li>Led the design and development of the programme's GIS infrastructure, migrating it from ArcGIS Online to ArcGIS Enterprise hosted on AWS, and architected platforms that replaced multiple legacy solutions, delivering more than £2m in cost savings.</li>
+                    <li>Developed and deployed AI-powered features using AWS Bedrock and SageMaker, integrating large language models and machine learning into the platform.</li>
+                    <li>Trained corporate intelligence teams in Seattle, Dubai and London through hands-on GIS workshops.</li>
+                  </ul>
+                </article>
+                <article class="role">
+                  <h4 class="role-title">GIS Manager</h4>
+                  <p class="role-meta">Amazon · London · April 2022 to August 2023</p>
+                  <ul>
+                    <li>Rejoined Amazon to establish and lead a new GIS programme: built it from the ground up, defining strategy, priorities and roadmap, and secured buy-in across Corporate Security by turning operational needs into the programme's first GIS use cases.</li>
+                    <li>Launched Corporate Security's ArcGIS Online environment and managed its budget and licensing, setting the standards and governance that allowed it to scale.</li>
+                  </ul>
+                </article>
+                <article class="role">
+                  <h4 class="role-title">Senior Risk and Resilience Intelligence Analyst</h4>
+                  <p class="role-meta">Amazon · Prague · February 2017 to June 2020</p>
+                  <ul>
+                    <li>Led data-driven risk analysis and incident response using geospatial tools and statistical modelling, and built automated monitoring systems to identify and mitigate operational vulnerabilities across Amazon facilities.</li>
+                    <li>Developed real-time incident management dashboards and analytical frameworks that improved response times during critical events.</li>
+                    <li>Designed and delivered training programmes, technical documentation and hands-on workshops across Amazon sites globally.</li>
+                  </ul>
+                </article>
+              </div>
+            </section>
+            <section class="chapter">
+              <header class="chapter-head">
+                <h3 class="display-sm">Military geospatial intelligence</h3>
+                <p class="mono-sm chapter-when">2008 – 2015</p>
+                <p class="chapter-where">United States Army, global operations</p>
+              </header>
+              <div class="chapter-roles">
+                <article class="role">
+                  <h4 class="role-title">Operations Manager and Senior Geospatial Intelligence Analyst</h4>
+                  <p class="role-meta">United States Army · Global operations · June 2008 to July 2015</p>
+                  <ul>
+                    <li>Directed daily operations, training and professional development for a team of up to 60 personnel while serving as Senior GEOINT Analyst supporting United States Special Operations Command (SOCOM) and Special Operations Command Africa (SOCAF).</li>
+                    <li>Led geospatial intelligence production for special operations forces, NATO and national-level agencies, overseeing more than 1,400 imagery products and over 1,100 hours of full motion video analysis.</li>
+                    <li>Brought GIS into frontline intelligence, maintaining daily route layers of IEDs, checkpoints and points of interest, and fusing imagery with signals and human intelligence into a single operational picture.</li>
+                    <li>Held a Top Secret/SCI clearance with polygraph and completed specialised training including DGS-SOF, AFSOC Full Motion Video analysis certification and Joint Special Operations Task Force certification.</li>
+                  </ul>
+                </article>
+              </div>
+            </section>
+          </div>
+        </div>
+        <p class="stamp mono-sm" data-stamp aria-hidden="true"></p>
+      </div>
+    </section>
+
+    <!-- ── Cell 4: credentials ─────────────────────────────────────── -->
+    <section class="cell" id="credentials" data-cell data-code="wolford.credentials()">
+      <div class="prompt mono-sm" aria-hidden="true">In&nbsp;[<span data-n>&nbsp;</span>]:</div>
+      <div class="cell-main">
+        <pre class="code" aria-hidden="true"><code data-typed>wolford.credentials()</code></pre>
+        <div class="output">
+          <div class="output-head">
+            <h2 class="display-md">Credentials</h2>
+            <p class="body-lg">Degrees, professional accreditation and certifications.</p>
+          </div>
+          <table class="creds-table">
+            <thead>
+              <tr><th class="mono-sm">Type</th><th class="mono-sm">Credential</th><th class="mono-sm">Awarding body</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="mono-sm">Degree</td><td>MSc Geographical Information Systems<span class="note">Spatial mathematics, geodetic science, computer science, database systems, computational analysis</span></td><td>University of Aberdeen</td></tr>
+              <tr><td class="mono-sm">Degree</td><td>Executive MBA<span class="note">Strategic operations, organisational leadership, financial management</span></td><td>Quantic School of Business and Technology</td></tr>
+              <tr><td class="mono-sm">Degree</td><td>BA Communication and Media<span class="note">S.A.L.U.T.E. Veterans National Honor Society graduate · management and marketing</span></td><td>University of New York in Prague</td></tr>
+              <tr><td class="mono-sm">Charter</td><td>Chartered Geographer (GIS)<span class="note">Accredited 2022</span></td><td>Royal Geographical Society</td></tr>
+              <tr><td class="mono-sm">Fellowship</td><td>Fellow</td><td>Royal Geographical Society</td></tr>
+              <tr><td class="mono-sm">Certification</td><td>AWS Certified AI Practitioner</td><td>Amazon Web Services</td></tr>
+              <tr><td class="mono-sm">Certification</td><td>AWS Certified Cloud Practitioner</td><td>Amazon Web Services</td></tr>
+              <tr><td class="mono-sm">Certification</td><td>Google Cloud Digital Leader</td><td>Google Cloud</td></tr>
+              <tr><td class="mono-sm">Diploma</td><td>Geospatial Intelligence Analysis</td><td>US Army Intelligence and Security Command</td></tr>
+              <tr><td class="mono-sm">Service</td><td>School Governor<span class="note">2022 – 2025</span></td><td>Governors for Schools</td></tr>
+              <tr><td class="mono-sm">Membership</td><td>Member</td><td>ASIS International</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="stamp mono-sm" data-stamp aria-hidden="true"></p>
+      </div>
+    </section>
+
+    <!-- ── Cell 5: skills ──────────────────────────────────────────── -->
+    <section class="cell" id="skills" data-cell data-code="wolford.skills(group_by=&quot;domain&quot;)">
+      <div class="prompt mono-sm" aria-hidden="true">In&nbsp;[<span data-n>&nbsp;</span>]:</div>
+      <div class="cell-main">
+        <pre class="code" aria-hidden="true"><code data-typed>wolford.skills(group_by="domain")</code></pre>
+        <div class="output">
+          <div class="output-head">
+            <h2 class="display-md">Skills</h2>
+            <p class="body-lg">Where I focus, and the technical capability behind it.</p>
+          </div>
+          <dl class="skills">
+            <div class="skill-group">
+              <dt class="mono-sm">Focus areas</dt>
+              <dd><ul class="tags"><li>GIS strategy and roadmaps</li><li>Enterprise and cloud GIS architecture</li><li>Digital estates</li><li>Asset condition platforms</li><li>Web and mobile applications</li><li>Data integration (BIM, CAD, drone imagery, IoT, APIs)</li></ul></dd>
+            </div>
+            <div class="skill-group">
+              <dt class="mono-sm">Esri platform</dt>
+              <dd><ul class="tags"><li>ArcGIS Enterprise on AWS</li><li>ArcGIS Online administration</li><li>ArcGIS Pro</li><li>ArcGIS GeoBIM</li><li>Experience Builder</li><li>Survey123</li><li>ArcGIS Solutions</li><li>ArcGIS Maps for Power BI</li><li>ArcGIS Indoors</li><li>ArcGIS Field Maps</li><li>ArcGIS Dashboards</li><li>ArcGIS Workflow Manager</li><li>ArcGIS API for Python</li><li>ArcGIS Velocity</li></ul></dd>
+            </div>
+            <div class="skill-group">
+              <dt class="mono-sm">Data integration &amp; geodesy</dt>
+              <dd><ul class="tags"><li>Spatial data modelling</li><li>Schema governance</li><li>Metadata</li><li>CRS and transformations</li><li>British National Grid</li><li>OSGB36</li><li>ETRS89</li><li>OSTN15</li><li>CAD and BIM to GIS</li><li>Point cloud and drone imagery</li><li>PostGIS</li></ul></dd>
+            </div>
+            <div class="skill-group">
+              <dt class="mono-sm">Development</dt>
+              <dd><ul class="tags"><li>Python</li><li>Arcade</li><li>JavaScript</li><li>R</li><li>SQL</li><li>NoSQL</li><li>REST APIs</li><li>Docker</li><li>Kubernetes</li><li>Terraform</li><li>Git</li></ul></dd>
+            </div>
+            <div class="skill-group">
+              <dt class="mono-sm">Cloud &amp; AI</dt>
+              <dd><ul class="tags"><li>AWS</li><li>S3</li><li>EC2</li><li>CloudFront</li><li>Bedrock</li><li>SageMaker</li><li>Glue</li><li>Lambda</li><li>Redshift</li><li>RDS</li><li>IAM</li><li>VPC</li><li>Google Cloud Platform</li><li>Machine learning</li><li>Natural language processing</li><li>Predictive modelling</li></ul></dd>
+            </div>
+            <div class="skill-group">
+              <dt class="mono-sm">Leadership</dt>
+              <dd><ul class="tags"><li>Technical strategy</li><li>Programme establishment</li><li>Client advisory</li><li>Governance and standards</li><li>Stakeholder engagement</li><li>Programme management</li><li>Budget and licensing</li><li>Risk management</li><li>Quality assurance</li><li>Capability building</li><li>Team leadership</li></ul></dd>
+            </div>
+          </dl>
+        </div>
+        <p class="stamp mono-sm" data-stamp aria-hidden="true"></p>
+      </div>
+    </section>
+
+    <!-- ── Cell 6: contact ─────────────────────────────────────────── -->
+    <section class="cell" id="contact" data-cell data-code="wolford.contact()">
+      <div class="prompt mono-sm" aria-hidden="true">In&nbsp;[<span data-n>&nbsp;</span>]:</div>
+      <div class="cell-main">
+        <pre class="code" aria-hidden="true"><code data-typed>wolford.contact()</code></pre>
+        <div class="output contact">
+          <h2 class="display-lg">Talk to me about your next idea.</h2>
+          <p class="body-lg">Always open to conversations about applying emerging technology in GIS, designing platforms that scale, and getting more value from spatial data.</p>
+          <a class="contact-email display-sm" href="#contact" data-email>Email me</a>
+          <dl class="contact-list">
+            <div><dt class="mono-sm">LinkedIn</dt><dd><a href="https://linkedin.com/in/charlesgwolford" target="_blank" rel="noopener">linkedin.com/in/charlesgwolford</a></dd></div>
+            <div><dt class="mono-sm">Based</dt><dd>Newcastle upon Tyne, England</dd></div>
+            <div><dt class="mono-sm">Right to work</dt><dd>UK · EU · US</dd></div>
+          </dl>
+          <div class="actions">
+            <a class="pill pill-solid" href="#contact" data-email>Email me</a>
+            <a class="pill pill-outline" href="https://linkedin.com/in/charlesgwolford" target="_blank" rel="noopener">Connect on LinkedIn
+              <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 11.5l7-7M6 4.5h5.5V10"/></svg>
+            </a>
+            <a class="pill pill-outline" href="assets/Charles-Wolford-CV.pdf" download="Charles-Wolford-CV.pdf"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2.5v8M4.5 7l3.5 3.5L11.5 7M3 13.5h10"/></svg> Download CV</a>
+          </div>
+        </div>
+        <p class="stamp mono-sm" data-stamp aria-hidden="true"></p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="foot">
+    <div class="foot-inner">
+      <span class="mono-sm">© 2026 Charles Wolford</span>
+      <span class="mono-sm" data-foot-status>kernel idle · <span data-cell-count>0</span>/<span data-cell-total>6</span> cells run</span>
+    </div>
+  </footer>
+
+  <script src="js/projects.js?v=12"></script>
+  <script src="js/figures.js?v=7"></script>
+  <script src="js/main.js?v=17"></script>
+  <script src="js/terrain.js?v=3"></script>
+</body>
+</html>
