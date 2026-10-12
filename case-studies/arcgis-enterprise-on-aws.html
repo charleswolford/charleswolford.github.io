@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ArcGIS Enterprise on AWS, with AI built in · Charles Wolford</title>
+  <meta name="description" content="How Charles Wolford moved a GIS programme from ArcGIS Online to ArcGIS Enterprise on AWS, replaced multiple third-party mapping and risk tools for more than £2m in savings, and built AI into the platform.">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta property="og:title" content="ArcGIS Enterprise on AWS, with AI built in · Charles Wolford">
+  <meta property="og:description" content="One governed GIS platform on AWS in place of several third-party mapping and risk tools, with AI that summarises incident reports, classifies locations and answers questions about the map.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400&family=Geist+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css?v=21">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip" href="#overview">Skip to content</a>
+
+  <header class="kernel" id="top">
+    <div class="kernel-inner">
+      <a class="kernel-file" href="../index.html">
+        <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 2.5h5l3 3v8h-8z"/><path d="M9.5 2.5v3h3"/><path d="M6.5 9.5h4M6.5 11.5h4"/></svg>
+        <span>arcgis_enterprise_on_aws.ipynb</span>
+      </a>
+
+      <nav class="kernel-nav" aria-label="Sections">
+        <a href="#overview">Overview</a>
+        <a href="#before">Before</a>
+        <a href="#pipeline">Workflow</a>
+        <a href="#outcome">Outcome</a>
+        <a href="#stack">Stack</a>
+        <a href="#next">Next</a>
+      </nav>
+
+      <div class="kernel-actions">
+        <span class="kernel-status" aria-live="polite">
+          <i class="dot" data-dot></i>
+          <span class="mono-sm" data-status>kernel idle</span>
+        </span>
+        <button class="pill pill-outline pill-sm" type="button" data-run-all aria-label="Run all cells">
+          <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3.5v9l7-4.5z"/></svg>
+          <span class="run-label">Run all</span>
+        </button>
+        <a class="pill pill-solid pill-sm" href="../index.html#contact" data-email>Email</a>
+        <button class="pill pill-outline pill-sm kernel-menu" type="button" aria-expanded="false" aria-controls="mobile-nav">Cells</button>
+      </div>
+    </div>
+    <nav class="kernel-mobile" id="mobile-nav" aria-label="Sections" hidden>
+      <a href="#overview">Overview</a>
+      <a href="#before">Before</a>
+      <a href="#pipeline">Workflow</a>
+      <a href="#outcome">Outcome</a>
+      <a href="#stack">Stack</a>
+      <a href="#next">Next</a>
+    </nav>
+  </header>
+
+  <main class="notebook">
+
+    <section class="cell" id="overview" data-cell data-code="cs = wolford.case_study(&quot;arcgis-enterprise-on-aws&quot;)">
+      <div class="prompt mono-sm" aria-hidden="true">In&nbsp;[<span data-n>&nbsp;</span>]:</div>
+      <div class="cell-main">
+        <pre class="code" aria-hidden="true"><code data-typed>cs = wolford.case_study(&quot;arcgis-enterprise-on-aws&quot;)</code></pre>
+        <div class="output case-head">
+          <a class="case-back mono-sm" href="../index.html#projects"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M12.5 8h-9M7 4.5L3.5 8 7 11.5"/></svg> All projects</a>
+          <p class="project-meta mono-sm"><span class="chip">Case study</span><span>Amazon · 2023 – 2025</span></p>
+          <h1 class="display-lg">ArcGIS Enterprise on AWS, with AI built in</h1>
+          <p class="lead">One governed GIS platform on AWS in place of several third-party mapping and risk tools, with AI that summarises incident reports, classifies locations and answers questions about the map.</p>
+          <dl class="case-facts">
+            <div><dt class="mono-sm">Role</dt><dd>Technical lead and architect</dd></div>
+            <div><dt class="mono-sm">Users</dt><dd>Hundreds, across Corporate Security and other teams</dd></div>
+            <div><dt class="mono-sm">Platform</dt><dd>ArcGIS Enterprise on AWS</dd></div>
+          </dl>
+        </div>
+        <p class="stamp mono-sm" data-stamp aria-hidden="true"></p>
+      </div>
+    </section>
+
+    <section class="cell" id="before" data-cell data-code="cs.before()">
+      <div class="prompt mono-sm" aria-hidden="true">In&nbsp;[<span data-n>&nbsp;</span>]:</div>
+      <div class="cell-main">
+        <pre class="code" aria-hidden="true"><code data-typed>cs.before()</code></pre>
+        <div class="output">
+          <div class="output-head"><h2 class="display-md">Before</h2></div>
+          <div class="prose">
+            <p>The programme ran on <strong>ArcGIS Online</strong>, alongside <strong>multiple third-party mapping and risk tools</strong>.</p>
+            <p>ArcGIS Online fell short on security, scale, cost and integration with the rest of the organisation's systems. The answer was one platform the organisation controlled end to end, able to replace the tools around it.</p>
+          </div>
+        </div>
+        <p class="stamp mono-sm" data-stamp aria-hidden="true"></p>
+      </div>
+    </section>
+
+    <section class="cell" id="pipeline" data-cell data-code="cs.workflow()">
+      <div class="prompt mono-sm" aria-hidden="true">In&nbsp;[<span data-n>&nbsp;</span>]:</div>
+      <div class="cell-main">
+        <pre class="code" aria-hidden="true"><code data-typed>cs.workflow()</code></pre>
+        <div class="output">
+          <div class="output-head"><h2 class="display-md">Workflow</h2></div>
+          <ol class="pipeline" style="--stages:4">
+            <li class="stage" style="--n:0">
+              <p class="stage-n mono-sm">01 · Define</p>
+              <h3>Infrastructure as code</h3>
+              <ul><li>Terraform</li><li>Repeatable environments</li></ul>
+            </li>
+            <li class="stage" style="--n:1">
+              <p class="stage-n mono-sm">02 · Host</p>
+              <h3>AWS foundation</h3>
+              <ul><li>EC2 for the ArcGIS servers</li><li>S3 for storage</li><li>Route 53 for DNS</li><li>IAM for access control</li></ul>
+            </li>
+            <li class="stage" style="--n:2">
+              <p class="stage-n mono-sm">03 · Serve</p>
+              <h3>ArcGIS Enterprise</h3>
+              <ul><li>Portal, Server and Data Store</li><li>Hosted on AWS</li><li>Replaces third-party tools</li></ul>
+            </li>
+            <li class="stage" style="--n:3">
+              <p class="stage-n mono-sm">04 · Extend</p>
+              <h3>AI and alerts</h3>
+              <ul><li>Bedrock language models</li><li>SageMaker machine learning</li><li>SNS notifications</li></ul>
+            </li>
+          </ol>
+          <p class="pipeline-note mono-sm">Diagram of the architecture; no internal system names.</p>
+          <div class="callout">
+            <p class="mono-sm">Security by design</p>
+            <p>In a security organisation, access is part of the design, not an afterthought. Environments are defined in Terraform and permissions in IAM, so every environment is built the same way and access is controlled in one place.</p>
+          </div>
+        </div>
+        <p class="stamp mono-sm" data-stamp aria-hidden="true"></p>
+      </div>
+    </section>
+
+    <section class="cell" id="outcome" data-cell data-code="cs.outcome()">
+      <div class="prompt mono-sm" aria-hidden="true">In&nbsp;[<span data-n>&nbsp;</span>]:</div>
+      <div class="cell-main">
+        <pre class="code" aria-hidden="true"><code data-typed>cs.outcome()</code></pre>
+        <div class="output">
+          <div class="output-head"><h2 class="display-md">Outcome</h2></div>
+          <ul class="outcomes">
+            <li class="outcome"><h3>More than £2m saved</h3><p>Replacing multiple third-party mapping and risk tools with one platform delivered more than £2m in cost savings.</p></li>
+            <li class="outcome"><h3>AI in the workflow</h3><p>Language models and machine learning summarise incident reports, classify locations and answer questions about the map.</p></li>
+            <li class="outcome"><h3>One platform at scale</h3><p>Hundreds of users across Corporate Security and other teams, on a platform the organisation controls.</p></li>
+          </ul>
+        </div>
+        <p class="stamp mono-sm" data-stamp aria-hidden="true"></p>
+      </div>
+    </section>
+
+    <section class="cell" id="stack" data-cell data-code="cs.stack()">
+      <div class="prompt mono-sm" aria-hidden="true">In&nbsp;[<span data-n>&nbsp;</span>]:</div>
+      <div class="cell-main">
+        <pre class="code" aria-hidden="true"><code data-typed>cs.stack()</code></pre>
+        <div class="output">
+          <div class="output-head"><h2 class="display-md">Stack</h2></div>
+          <ul class="tags"><li>ArcGIS Enterprise</li><li>AWS EC2</li><li>S3</li><li>IAM</li><li>Route 53</li><li>SNS</li><li>Terraform</li><li>Bedrock</li><li>SageMaker</li></ul>
+        </div>
+        <p class="stamp mono-sm" data-stamp aria-hidden="true"></p>
+      </div>
+    </section>
+
+    <section class="cell" id="next" data-cell data-code="wolford.case_studies.more()">
+      <div class="prompt mono-sm" aria-hidden="true">In&nbsp;[<span data-n>&nbsp;</span>]:</div>
+      <div class="cell-main">
+        <pre class="code" aria-hidden="true"><code data-typed>wolford.case_studies.more()</code></pre>
+        <div class="output">
+          <div class="output-head"><h2 class="display-md">More case studies</h2></div>
+          <div class="case-next">
+            <a class="case-link" href="web-and-mobile-gis.html"><span class="mono-sm">Previous</span><span class="display-xs">Web and mobile GIS applications</span><span class="project-more">Read <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 11.5l7-7M6 4.5h5.5V10"/></svg></span></a>
+            <a class="case-link" href="standing-up-a-gis-programme.html"><span class="mono-sm">Next</span><span class="display-xs">Standing up a GIS programme</span><span class="project-more">Read <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 11.5l7-7M6 4.5h5.5V10"/></svg></span></a>
+          </div>
+          <div class="actions" style="margin-top:var(--s-6)">
+            <a class="pill pill-solid" href="../index.html#contact" data-email>Email me</a>
+            <a class="pill pill-outline" href="../index.html#projects">All projects</a>
+          </div>
+        </div>
+        <p class="stamp mono-sm" data-stamp aria-hidden="true"></p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="foot">
+    <div class="foot-inner">
+      <span class="mono-sm">© 2026 Charles Wolford</span>
+      <span class="mono-sm">Case study · ArcGIS Enterprise on AWS</span>
+      <span class="mono-sm" data-foot-status>kernel idle · <span data-cell-count>0</span>/<span data-cell-total>6</span> cells run</span>
+    </div>
+  </footer>
+
+  <script src="../js/main.js?v=17"></script>
+</body>
+</html>

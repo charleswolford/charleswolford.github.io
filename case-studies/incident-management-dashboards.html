@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Real-time incident management dashboards · Charles Wolford</title>
+  <meta name="description" content="Real-time dashboards and automated geospatial monitoring built by Charles Wolford for incidents affecting Amazon operations: weather, security, supply disruption and cargo crime.">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta property="og:title" content="Real-time incident management dashboards · Charles Wolford">
+  <meta property="og:description" content="Real-time dashboards and automated monitoring for the incidents that affect operations: weather, security, supply disruption and cargo crime.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400&family=Geist+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css?v=21">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip" href="#overview">Skip to content</a>
+
+  <header class="kernel" id="top">
+    <div class="kernel-inner">
+      <a class="kernel-file" href="../index.html">
+        <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 2.5h5l3 3v8h-8z"/><path d="M9.5 2.5v3h3"/><path d="M6.5 9.5h4M6.5 11.5h4"/></svg>
+        <span>incident_dashboards.ipynb</span>
+      </a>
+
+      <nav class="kernel-nav" aria-label="Sections">
+        <a href="#overview">Overview</a>
+        <a href="#before">Context</a>
+        <a href="#pipeline">Workflow</a>
+        <a href="#outcome">Outcome</a>
+        <a href="#stack">Stack</a>
+        <a href="#next">Next</a>
+      </nav>
+
+      <div class="kernel-actions">
+        <span class="kernel-status" aria-live="polite">
+          <i class="dot" data-dot></i>
+          <span class="mono-sm" data-status>kernel idle</span>
+        </span>
+        <button class="pill pill-outline pill-sm" type="button" data-run-all aria-label="Run all cells">
+          <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3.5v9l7-4.5z"/></svg>
+          <span class="run-label">Run all</span>
+        </button>
+        <a class="pill pill-solid pill-sm" href="../index.html#contact" data-email>Email</a>
+        <button class="pill pill-outline pill-sm kernel-menu" type="button" aria-expanded="false" aria-controls="mobile-nav">Cells</button>
+      </div>
+    </div>
+    <nav class="kernel-mobile" id="mobile-nav" aria-label="Sections" hidden>
+      <a href="#overview">Overview</a>
+      <a href="#before">Context</a>
+      <a href="#pipeline">Workflow</a>
+      <a href="#outcome">Outcome</a>
+      <a href="#stack">Stack</a>
+      <a href="#next">Next</a>
+    </nav>
+  </header>
+
+  <main class="notebook">
+
+    <section class="cell" id="overview" data-cell data-code="cs = wolford.case_study(&quot;incident-management-dashboards&quot;)">
+      <div class="prompt mono-sm" aria-hidden="true">In&nbsp;[<span data-n>&nbsp;</span>]:</div>
+      <div class="cell-main">
+        <pre class="code" aria-hidden="true"><code data-typed>cs = wolford.case_study(&quot;incident-management-dashboards&quot;)</code></pre>
+        <div class="output case-head">
+          <a class="case-back mono-sm" href="../index.html#projects"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M12.5 8h-9M7 4.5L3.5 8 7 11.5"/></svg> All projects</a>
+          <p class="project-meta mono-sm"><span class="chip">Case study</span><span>Amazon · 2017 – 2020</span></p>
+          <h1 class="display-lg">Real-time incident management dashboards</h1>
+          <p class="lead">Real-time dashboards and automated monitoring for the incidents that affect operations: weather, security, supply disruption and cargo crime.</p>
+          <dl class="case-facts">
+            <div><dt class="mono-sm">Role</dt><dd>Senior Risk and Resilience Intelligence Analyst</dd></div>
+            <div><dt class="mono-sm">Based</dt><dd>Prague</dd></div>
+            <div><dt class="mono-sm">Tools</dt><dd>R, ArcGIS Dashboards, Tableau, QuickSight</dd></div>
+          </dl>
+        </div>
+        <p class="stamp mono-sm" data-stamp aria-hidden="true"></p>
+      </div>
+    </section>
+
+    <section class="cell" id="before" data-cell data-code="cs.context()">
+      <div class="prompt mono-sm" aria-hidden="true">In&nbsp;[<span data-n>&nbsp;</span>]:</div>
+      <div class="cell-main">
+        <pre class="code" aria-hidden="true"><code data-typed>cs.context()</code></pre>
+        <div class="output">
+          <div class="output-head"><h2 class="display-md">Context</h2></div>
+          <div class="prose">
+            <p>Risk and resilience work depends on knowing <strong>what is happening, where, and what it touches</strong>.</p>
+            <p>The job was to turn incident data into something teams could act on during critical events, and to watch for risk automatically rather than waiting for it to be reported.</p>
+          </div>
+        </div>
+        <p class="stamp mono-sm" data-stamp aria-hidden="true"></p>
+      </div>
+    </section>
+
+    <section class="cell" id="pipeline" data-cell data-code="cs.workflow()">
+      <div class="prompt mono-sm" aria-hidden="true">In&nbsp;[<span data-n>&nbsp;</span>]:</div>
+      <div class="cell-main">
+        <pre class="code" aria-hidden="true"><code data-typed>cs.workflow()</code></pre>
+        <div class="output">
+          <div class="output-head"><h2 class="display-md">Workflow</h2></div>
+          <ol class="pipeline" style="--stages:4">
+            <li class="stage" style="--n:0">
+              <p class="stage-n mono-sm">01 · Watch</p>
+              <h3>Incident data</h3>
+              <ul><li>Weather</li><li>Security</li><li>Supply disruption</li><li>Cargo crime</li></ul>
+            </li>
+            <li class="stage" style="--n:1">
+              <p class="stage-n mono-sm">02 · Analyse</p>
+              <h3>Spatial and statistical</h3>
+              <ul><li>Geospatial analysis</li><li>Statistical modelling in R</li></ul>
+            </li>
+            <li class="stage" style="--n:2">
+              <p class="stage-n mono-sm">03 · Monitor</p>
+              <h3>Automated rules</h3>
+              <ul><li>Vehicles entering high-risk areas</li><li>Checks run automatically</li></ul>
+            </li>
+            <li class="stage" style="--n:3">
+              <p class="stage-n mono-sm">04 · Act</p>
+              <h3>Alerts and dashboards</h3>
+              <ul><li>AWS SNS alerts</li><li>ArcGIS Dashboards</li><li>Tableau and QuickSight</li></ul>
+            </li>
+          </ol>
+          <p class="pipeline-note mono-sm">Diagram of the workflow, not operational data.</p>
+          <div class="callout">
+            <p class="mono-sm">Example: cargo crime</p>
+            <p>One monitor watched for cargo trucks entering areas with a high risk of cargo crime. When a truck crossed into one, an alert went out through AWS SNS, so the right people knew in real time.</p>
+          </div>
+        </div>
+        <p class="stamp mono-sm" data-stamp aria-hidden="true"></p>
+      </div>
+    </section>
+
+    <section class="cell" id="outcome" data-cell data-code="cs.outcome()">
+      <div class="prompt mono-sm" aria-hidden="true">In&nbsp;[<span data-n>&nbsp;</span>]:</div>
+      <div class="cell-main">
+        <pre class="code" aria-hidden="true"><code data-typed>cs.outcome()</code></pre>
+        <div class="output">
+          <div class="output-head"><h2 class="display-md">Outcome</h2></div>
+          <ul class="outcomes">
+            <li class="outcome"><h3>Faster response</h3><p>Teams saw incidents as they happened, improving response times during critical events.</p></li>
+            <li class="outcome"><h3>Fewer missed events</h3><p>Automated monitoring meant fewer events went unnoticed.</p></li>
+            <li class="outcome"><h3>Wider coverage</h3><p>Weather, security, supply disruption and cargo crime watched across Amazon facilities.</p></li>
+          </ul>
+        </div>
+        <p class="stamp mono-sm" data-stamp aria-hidden="true"></p>
+      </div>
+    </section>
+
+    <section class="cell" id="stack" data-cell data-code="cs.stack()">
+      <div class="prompt mono-sm" aria-hidden="true">In&nbsp;[<span data-n>&nbsp;</span>]:</div>
+      <div class="cell-main">
+        <pre class="code" aria-hidden="true"><code data-typed>cs.stack()</code></pre>
+        <div class="output">
+          <div class="output-head"><h2 class="display-md">Stack</h2></div>
+          <ul class="tags"><li>R</li><li>Statistical modelling</li><li>Geospatial analysis</li><li>ArcGIS Dashboards</li><li>Tableau</li><li>Amazon QuickSight</li><li>AWS SNS</li></ul>
+        </div>
+        <p class="stamp mono-sm" data-stamp aria-hidden="true"></p>
+      </div>
+    </section>
+
+    <section class="cell" id="next" data-cell data-code="wolford.case_studies.more()">
+      <div class="prompt mono-sm" aria-hidden="true">In&nbsp;[<span data-n>&nbsp;</span>]:</div>
+      <div class="cell-main">
+        <pre class="code" aria-hidden="true"><code data-typed>wolford.case_studies.more()</code></pre>
+        <div class="output">
+          <div class="output-head"><h2 class="display-md">More case studies</h2></div>
+          <div class="case-next">
+            <a class="case-link" href="standing-up-a-gis-programme.html"><span class="mono-sm">Previous</span><span class="display-xs">Standing up a GIS programme</span><span class="project-more">Read <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 11.5l7-7M6 4.5h5.5V10"/></svg></span></a>
+            <a class="case-link" href="estate-digital-twins.html"><span class="mono-sm">Next</span><span class="display-xs">Estate digital twins</span><span class="project-more">Read <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 11.5l7-7M6 4.5h5.5V10"/></svg></span></a>
+          </div>
+          <div class="actions" style="margin-top:var(--s-6)">
+            <a class="pill pill-solid" href="../index.html#contact" data-email>Email me</a>
+            <a class="pill pill-outline" href="../index.html#projects">All projects</a>
+          </div>
+        </div>
+        <p class="stamp mono-sm" data-stamp aria-hidden="true"></p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="foot">
+    <div class="foot-inner">
+      <span class="mono-sm">© 2026 Charles Wolford</span>
+      <span class="mono-sm">Case study · Incident management dashboards</span>
+      <span class="mono-sm" data-foot-status>kernel idle · <span data-cell-count>0</span>/<span data-cell-total>6</span> cells run</span>
+    </div>
+  </footer>
+
+  <script src="../js/main.js?v=17"></script>
+</body>
+</html>

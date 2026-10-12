@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Web and mobile GIS applications · Charles Wolford</title>
+  <meta name="description" content="Bespoke Experience Builder web applications, Survey123 and Field Maps mobile apps, and floor-aware capacity mapping built by Charles Wolford at Ridge.">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta property="og:title" content="Web and mobile GIS applications · Charles Wolford">
+  <meta property="og:description" content="The applications that put Ridge&#x27;s GIS in people&#x27;s hands: bespoke web apps, mobile data capture, and floor-aware mapping of rooms and capacity.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400&family=Geist+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css?v=21">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip" href="#overview">Skip to content</a>
+
+  <header class="kernel" id="top">
+    <div class="kernel-inner">
+      <a class="kernel-file" href="../index.html">
+        <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 2.5h5l3 3v8h-8z"/><path d="M9.5 2.5v3h3"/><path d="M6.5 9.5h4M6.5 11.5h4"/></svg>
+        <span>web_and_mobile_gis.ipynb</span>
+      </a>
+
+      <nav class="kernel-nav" aria-label="Sections">
+        <a href="#overview">Overview</a>
+        <a href="#before">Context</a>
+        <a href="#pipeline">Workflow</a>
+        <a href="#outcome">Outcome</a>
+        <a href="#stack">Stack</a>
+        <a href="#next">Next</a>
+      </nav>
+
+      <div class="kernel-actions">
+        <span class="kernel-status" aria-live="polite">
+          <i class="dot" data-dot></i>
+          <span class="mono-sm" data-status>kernel idle</span>
+        </span>
+        <button class="pill pill-outline pill-sm" type="button" data-run-all aria-label="Run all cells">
+          <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3.5v9l7-4.5z"/></svg>
+          <span class="run-label">Run all</span>
+        </button>
+        <a class="pill pill-solid pill-sm" href="../index.html#contact" data-email>Email</a>
+        <button class="pill pill-outline pill-sm kernel-menu" type="button" aria-expanded="false" aria-controls="mobile-nav">Cells</button>
+      </div>
+    </div>
+    <nav class="kernel-mobile" id="mobile-nav" aria-label="Sections" hidden>
+      <a href="#overview">Overview</a>
+      <a href="#before">Context</a>
+      <a href="#pipeline">Workflow</a>
+      <a href="#outcome">Outcome</a>
+      <a href="#stack">Stack</a>
+      <a href="#next">Next</a>
+    </nav>
+  </header>
+
+  <main class="notebook">
+
+    <section class="cell" id="overview" data-cell data-code="cs = wolford.case_study(&quot;web-and-mobile-gis&quot;)">
+      <div class="prompt mono-sm" aria-hidden="true">In&nbsp;[<span data-n>&nbsp;</span>]:</div>
+      <div class="cell-main">
+        <pre class="code" aria-hidden="true"><code data-typed>cs = wolford.case_study(&quot;web-and-mobile-gis&quot;)</code></pre>
+        <div class="output case-head">
+          <a class="case-back mono-sm" href="../index.html#projects"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M12.5 8h-9M7 4.5L3.5 8 7 11.5"/></svg> All projects</a>
+          <p class="project-meta mono-sm"><span class="chip">Case study</span><span>Ridge and Partners LLP · 2025 – present</span></p>
+          <h1 class="display-lg">Web and mobile GIS applications</h1>
+          <p class="lead">The applications that put Ridge&#x27;s GIS in people&#x27;s hands: bespoke web apps, mobile data capture, and floor-aware mapping of rooms and capacity.</p>
+          <dl class="case-facts">
+            <div><dt class="mono-sm">Role</dt><dd>Architect and developer</dd></div>
+            <div><dt class="mono-sm">Scope</dt><dd>Web, mobile and indoor mapping</dd></div>
+            <div><dt class="mono-sm">Platform</dt><dd>ArcGIS Experience Builder, Survey123, Field Maps</dd></div>
+          </dl>
+        </div>
+        <p class="stamp mono-sm" data-stamp aria-hidden="true"></p>
+      </div>
+    </section>
+
+    <section class="cell" id="before" data-cell data-code="cs.context()">
+      <div class="prompt mono-sm" aria-hidden="true">In&nbsp;[<span data-n>&nbsp;</span>]:</div>
+      <div class="cell-main">
+        <pre class="code" aria-hidden="true"><code data-typed>cs.context()</code></pre>
+        <div class="output">
+          <div class="output-head"><h2 class="display-md">Context</h2></div>
+          <div class="prose">
+            <p>Part of building and scaling Ridge's GIS offer, from the platforms and services behind it to <strong>solutions tailored to each client</strong>.</p>
+            <p>Where an off-the-shelf app would not do the job, I build one that does.</p>
+          </div>
+        </div>
+        <p class="stamp mono-sm" data-stamp aria-hidden="true"></p>
+      </div>
+    </section>
+
+    <section class="cell" id="pipeline" data-cell data-code="cs.workflow()">
+      <div class="prompt mono-sm" aria-hidden="true">In&nbsp;[<span data-n>&nbsp;</span>]:</div>
+      <div class="cell-main">
+        <pre class="code" aria-hidden="true"><code data-typed>cs.workflow()</code></pre>
+        <div class="output">
+          <div class="output-head"><h2 class="display-md">Workflow</h2></div>
+          <ol class="pipeline" style="--stages:3">
+            <li class="stage" style="--n:0">
+              <p class="stage-n mono-sm">01 · Web</p>
+              <h3>Bespoke applications</h3>
+              <ul><li>Experience Builder Developer Edition</li><li>Custom widgets</li><li>Arcade logic</li><li>Integrations</li></ul>
+            </li>
+            <li class="stage" style="--n:1">
+              <p class="stage-n mono-sm">02 · Mobile</p>
+              <h3>Field data capture</h3>
+              <ul><li>Survey123 forms</li><li>Field Maps</li></ul>
+            </li>
+            <li class="stage" style="--n:2">
+              <p class="stage-n mono-sm">03 · Indoor</p>
+              <h3>Floor-aware mapping</h3>
+              <ul><li>Rooms and floors</li><li>Meeting rooms</li><li>Capacity</li></ul>
+            </li>
+          </ol>
+          <p class="pipeline-note mono-sm">Three strands of the same GIS offer.</p>
+          <div class="callout">
+            <p class="mono-sm">What makes it bespoke</p>
+            <p>The web applications are built in Experience Builder Developer Edition rather than the standard configurable builder. That opens up custom widgets, Arcade logic and integrations with other systems, so the app fits the client&#x27;s workflow instead of the other way round.</p>
+          </div>
+        </div>
+        <p class="stamp mono-sm" data-stamp aria-hidden="true"></p>
+      </div>
+    </section>
+
+    <section class="cell" id="outcome" data-cell data-code="cs.outcome()">
+      <div class="prompt mono-sm" aria-hidden="true">In&nbsp;[<span data-n>&nbsp;</span>]:</div>
+      <div class="cell-main">
+        <pre class="code" aria-hidden="true"><code data-typed>cs.outcome()</code></pre>
+        <div class="output">
+          <div class="output-head"><h2 class="display-md">Outcome</h2></div>
+          <ul class="outcomes">
+            <li class="outcome"><h3>Apps that fit the job</h3><p>Functionality built for the client&#x27;s workflow, not bent to fit a template.</p></li>
+            <li class="outcome"><h3>Data from the field</h3><p>Survey123 and Field Maps bring field records straight into the GIS.</p></li>
+            <li class="outcome"><h3>Space you can plan</h3><p>Rooms, floors, meeting rooms and capacity mapped floor by floor for capacity management.</p></li>
+          </ul>
+        </div>
+        <p class="stamp mono-sm" data-stamp aria-hidden="true"></p>
+      </div>
+    </section>
+
+    <section class="cell" id="stack" data-cell data-code="cs.stack()">
+      <div class="prompt mono-sm" aria-hidden="true">In&nbsp;[<span data-n>&nbsp;</span>]:</div>
+      <div class="cell-main">
+        <pre class="code" aria-hidden="true"><code data-typed>cs.stack()</code></pre>
+        <div class="output">
+          <div class="output-head"><h2 class="display-md">Stack</h2></div>
+          <ul class="tags"><li>Experience Builder Developer Edition</li><li>Arcade</li><li>JavaScript</li><li>Survey123</li><li>Field Maps</li><li>Indoor mapping</li></ul>
+        </div>
+        <p class="stamp mono-sm" data-stamp aria-hidden="true"></p>
+      </div>
+    </section>
+
+    <section class="cell" id="next" data-cell data-code="wolford.case_studies.more()">
+      <div class="prompt mono-sm" aria-hidden="true">In&nbsp;[<span data-n>&nbsp;</span>]:</div>
+      <div class="cell-main">
+        <pre class="code" aria-hidden="true"><code data-typed>wolford.case_studies.more()</code></pre>
+        <div class="output">
+          <div class="output-head"><h2 class="display-md">More case studies</h2></div>
+          <div class="case-next">
+            <a class="case-link" href="drone-condition-surveys.html"><span class="mono-sm">Previous</span><span class="display-xs">Drone condition survey mapping</span><span class="project-more">Read <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 11.5l7-7M6 4.5h5.5V10"/></svg></span></a>
+            <a class="case-link" href="arcgis-enterprise-on-aws.html"><span class="mono-sm">Next</span><span class="display-xs">ArcGIS Enterprise on AWS, with AI built in</span><span class="project-more">Read <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 11.5l7-7M6 4.5h5.5V10"/></svg></span></a>
+          </div>
+          <div class="actions" style="margin-top:var(--s-6)">
+            <a class="pill pill-solid" href="../index.html#contact" data-email>Email me</a>
+            <a class="pill pill-outline" href="../index.html#projects">All projects</a>
+          </div>
+        </div>
+        <p class="stamp mono-sm" data-stamp aria-hidden="true"></p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="foot">
+    <div class="foot-inner">
+      <span class="mono-sm">© 2026 Charles Wolford</span>
+      <span class="mono-sm">Case study · Web and mobile GIS</span>
+      <span class="mono-sm" data-foot-status>kernel idle · <span data-cell-count>0</span>/<span data-cell-total>6</span> cells run</span>
+    </div>
+  </footer>
+
+  <script src="../js/main.js?v=17"></script>
+</body>
+</html>
